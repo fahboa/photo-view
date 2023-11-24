@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Montserrat:wght@100;200;300;700&family=Nunito&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@400;500;600;700&family=Raleway:wght@800&display=swap");
+@import url("https://db.onlinewebfonts.com/c/f9c29582ab6e0d72175939ac663b784c?family=Klavika+Web+Basic+Bold");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #EEF2F8;
+  font-weight: 100;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #EEF2F8;
+  padding: 20px;
+}
+
+header .header-left,
+header .header-right {
+  font-family: "Klavika Web Basic Bold";
+  width: 100%;
+}
+
+header .header-left h5 {
+  font-size: 18px;
+  font-weight: 30;
+  color: #2D748E;
+}
+
+header .header-left h2 {
+  font-size: 30px;
+  color: #F2B760;
+}
+
+.header-right h4 {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+.header-right h3 {
+  width: 100%;
+  font-family: "Klavika Web Basic Bold";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #F2B760;
+}
+
+.image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 7%;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 70vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.image-container .image-hover {
+  top: -30px;
+  position: relative;
+  width: 100%;
+  /* Adjust the width as needed */
+  height: 100%;
+  overflow: hidden;
+  cursor: pointer;
+  display: hidden;
+  margin-left: -80px;
+}
+
+.image-container .image-hover img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: -webkit-transform 0.9s ease-in-out;
+  transition: -webkit-transform 0.9s ease-in-out;
+  transition: transform 0.9s ease-in-out;
+  transition: transform 0.9s ease-in-out, -webkit-transform 0.9s ease-in-out;
+}
+
+.image-container .image-hover .image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* Adjust the width as needed */
+  height: 100%;
+  padding: -1px;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 1;
+}
+
+.image-container .image-hover:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.image-container .image-hover:hover .image-text {
+  opacity: 1;
+}
+
+.image-text .course_info {
+  padding: 2px 7px 6px;
+  /* Adjust the padding as needed */
+}
+
+.image-text .course_info p {
+  font-size: 0.8rem;
+  /* Adjust the font size as needed */
+  font-family: "Nunito";
+}
+
+.image-text .course_info h4 {
+  font-size: 1rem;
+  /* Adjust the font size as needed */
+  font-family: "Klavika Web Basic Bold";
+}
+
+.image-text .course_info .btn {
+  font-size: 0.9rem;
+  /* Adjust the font size as needed */
+  color: #F2B760;
+}
+
+/*Pop up*/
+.box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+p {
+  font-size: 17px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.box a {
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.modal {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  /* Change from absolute to fixed */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+  /* Set a higher z-index value to ensure it's displayed in front */
+}
+
+.content {
+  position: relative;
+  /* Change from absolute to relative */
+  background: #D9D9D9;
+  width: 1257px;
+  height: 665px;
+  padding: 1em 2em;
+  border-radius: 4px;
+  z-index: 1000;
+  /* Set a higher z-index value than the modal */
+  text-align: center;
+}
+
+.content h1 {
+  text-align: center;
+  font-family: "Nunito";
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 98px;
+  margin-top: 23%;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.box-close {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    /* Stack items in a column on smaller screens */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /* Center items on smaller screens */
+  }
+  .header-left,
+  .header-right {
+    width: 100%;
+    /* Make both sections take up the full width on smaller screens */
+    text-align: center;
+    /* Center text in each section */
+    margin-bottom: 20px;
+    /* Add some spacing between the sections */
+  }
+  .image-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 200vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .image-hover {
+    margin-top: -22px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
